@@ -1,18 +1,15 @@
 # Shelepova Nadezhda
---------
 
 ## Contacts
 
 **Email:** nadia344g@gmail.com
-**Discord:** NadezhdaShel
-**GitHub:** [NadezhdaShel](https://nadezhdashel.github.io)
 
-***********
+**Discord:** NadezhdaShel
+
+**GitHub:** [NadezhdaShel](https://nadezhdashel.github.io)
 
 ## About Myself
 
-
-************
 
 ## Skills
 
@@ -23,8 +20,6 @@
 * GitHub
 * VS Code
 * Figma, Zeplin
-
-************
 
 ## Code example
 
@@ -48,13 +43,9 @@ function revrot (str,sz) {
 }
 ```
 
-***********
-
 ## Education
 
 * Voronezh State Technical University (Computer-aided design systems)
-
-*********
 
 ## Experience
 
@@ -62,8 +53,6 @@ function revrot (str,sz) {
 * Tajem - [nadezhdashel.github.io/Tajam](https://nadezhdashel.github.io/Tajam/)
 * Konstruct - [nadezhdashel.github.io/Konstruct](https://nadezhdashel.github.io/Konstruct/)
 * Pompeo - [nadezhdashel.github.io/Pompeo](https://nadezhdashel.github.io/Pompeo/)
-
-**********
 
 ## English
 
