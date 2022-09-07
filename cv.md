@@ -1,4 +1,5 @@
-# Shelepova Nadezhda
+# Nadezhda Shelepova
+
 
 ## Contacts
 
@@ -6,21 +7,25 @@
 
 **Discord:** NadezhdaShel
 
-**GitHub:** [NadezhdaShel](https://nadezhdashel.github.io)
+**GitHub:** [NadezhdaShel](https://nadezhdashel.github.io/)
 
+  
 ## About Myself
 
+I work as a design engineer, but I'm very interested in creating websites. I would like to change my profession and work as a frontend developer. I like to learn something new and in this occupation I see great prospects for professional growth.
+  
 
 ## Skills
 
 * HTML
 * CSS
 * Preprocessor SCSS, BEM methodology 
-* JavaScript (Fundamental, DOM)
+* JavaScript (in progress)
 * GitHub
 * VS Code
 * Figma, Zeplin
 
+  
 ## Code example
 
 **Solution task ["Reverse or rotate?"](https://www.codewars.com/kata/56b5afb4ed1f6d5fb0000991) from website Codewars:**
@@ -43,10 +48,13 @@ function revrot (str,sz) {
 }
 ```
 
+  
 ## Education
 
 * Voronezh State Technical University (Computer-aided design systems)
+* Self-learning of the basics of HTML, CSS, JavaScript from various sources on the Internet
 
+  
 ## Experience
 
 **Educational projects:**
@@ -54,6 +62,7 @@ function revrot (str,sz) {
 * Konstruct - [nadezhdashel.github.io/Konstruct](https://nadezhdashel.github.io/Konstruct/)
 * Pompeo - [nadezhdashel.github.io/Pompeo](https://nadezhdashel.github.io/Pompeo/)
 
+  
 ## English
 
 Level A1
