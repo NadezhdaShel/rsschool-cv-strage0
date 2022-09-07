@@ -7,7 +7,7 @@
 
 **Discord:** NadezhdaShel
 
-**GitHub:** [NadezhdaShel](https://nadezhdashel.github.io/)
+**GitHub:** [NadezhdaShel](https://github.com/Nadezhdashel)
 
   
 ## About Myself
