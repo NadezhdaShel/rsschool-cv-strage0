@@ -1,0 +1,41 @@
+.skills {}
+
+.skills__wrapper {
+  padding-top: 100px;
+  padding-bottom: 70px;
+}
+
+.skills__title {
+  margin: 0px 0px 30px 0px;
+
+}
+
+.skills__list {}
+
+.skills__item {
+  position: relative;
+  margin: 0px 0px 10px 0px;
+  padding: 0px 0px 0px 20px;
+  @extend %primary-font;
+
+  &:last-child {
+    margin: 0;
+  }
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    width: 7px;
+    height: 7px;
+    content: '';
+    display: inline-block;
+    background-color: $color1;
+    transform: translateY(-50%) rotate(45deg);
+
+    @media (max-width: $mobile) {
+      width: 5px;
+      height: 5px;
+    }
+  }
+}

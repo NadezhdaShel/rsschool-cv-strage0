@@ -1,0 +1,37 @@
+$line-width-decorate: 3px;
+$radius-decorate: 20px;
+$gradient: linear-gradient(90deg, #8b3088, #693a90, #414191);
+$gradient-light-left: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+$gradient-light-right: linear-gradient(90deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+$color1: #8b3088;
+$color2: #693a90;
+$color3: #414191;
+$color-gray1: #2a2a38;
+$color-gray2: #1c1c27b6;
+$color-light: #ffffff;
+
+//Font Color
+$color-light-font: rgba(255, 255, 255, 0.9);
+$color-primary: $color-gray2;
+$color-secondary: $color-gray1;
+$color-link: $color3;
+$color-hover: $color1;
+$color-title: $color-gray1; //$color2;
+$color-icon: $color2;
+
+//max-width-content
+$max-width-content: 1160px;
+
+//Breack point
+$bp-menu: 768px;
+
+$desktop: 1600px; //***
+$desktop1: 1440px;
+$desktop2: 1280px;
+$desktop3: 1220px;
+$small-desktop: 1000px; //1000
+$small-desktop1: 980px; //***
+$pad: 768px; //***
+$tablet: 641px; //640
+$tablet1: 600px; //***
+$mobile: 360px; //***

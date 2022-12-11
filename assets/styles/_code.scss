@@ -1,0 +1,68 @@
+.code {}
+
+.code__wrapper {
+  padding-top: 100px;
+  padding-bottom: 70px;
+
+}
+
+.code__title {
+  margin: 0px 0px 50px 0px;
+}
+
+.code__content {
+  display: flex;
+
+  @media (max-width: $pad) {
+    display: block;
+  }
+}
+
+.code__task {
+  display: flex;
+  flex: 0 1 50%;
+  padding: 0px 40px 0px 0px;
+
+  @media (max-width: $pad) {
+    align-items: center;
+    padding: 0;
+    margin: 0px 0px 40px 0px;
+
+  }
+}
+
+.code__icon {
+  margin: 0px 20px 0px 0px;
+
+  svg {
+    fill: $color2;
+  }
+}
+
+.code__text {
+  @extend %subtitle-font;
+  color: $color-primary;
+}
+
+.code__link {
+  @extend %underline-link;
+  color: $color-link;
+
+  &:hover {
+    color: $color-hover;
+
+    &::after {
+      width: 100%;
+    }
+  }
+}
+
+.code__solution {
+  flex: 0 1 50%;
+  padding: 20px 20px;
+  @include gradient-border($line-width-decorate, $radius-decorate, $gradient);
+
+  pre {
+    white-space: pre-wrap;
+  }
+}

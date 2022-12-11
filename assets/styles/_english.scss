@@ -1,0 +1,14 @@
+.english {}
+
+.english__wrapper {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.english__title {
+  margin: 0px 0px 20px 0px;
+}
+
+.english__text {
+  @extend %subtitle-font;
+}

@@ -1,0 +1,28 @@
+.summary {}
+
+.summary__wrapper {
+  padding: 0px 0px 0px 60px;
+
+  @media (max-width: $small-desktop1) {
+    padding: 0px 0px 0px 40px;
+  }
+
+  @media (max-width: $pad) {
+    padding: 0;
+  }
+}
+
+.summary__title {
+  margin: 0px 0px 50px 0px;
+
+  @media (max-width: $pad) {
+    margin: 0px 0px 30px 0px;
+  }
+
+}
+
+.summary__text {
+  max-width: 600px;
+  @extend %primary-font;
+
+}

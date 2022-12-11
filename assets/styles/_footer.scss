@@ -1,0 +1,43 @@
+.footer {
+  background: $color3;
+}
+
+.footer__wrapper {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__git {
+
+}
+.footer__link {
+  display: flex;
+  align-items: center;
+
+  svg {
+    fill: $color-light-font;
+
+  }
+  &:hover {
+    svg {
+      fill: #000000;
+    }
+    .footer__text {
+      color: #000000;
+    }
+  }
+}
+.footer__icon {
+  margin: 0px 20px 0px 0px;
+}
+.footer__text {
+  color: $color-light-font;
+}
+.footer__year {
+  color: $color-light-font;
+}
+
+.footer__course {}
