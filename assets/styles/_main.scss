@@ -1,0 +1,65 @@
+html {
+  scroll-behavior: smooth;
+  position: absolute;
+  font-size: 10px;
+}
+
+body {
+  min-height: 100%;
+  font-family: 'Mulish', sans-serif;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.3;
+  color: $color-primary;
+
+  &.active-burger {
+    overflow: hidden;
+  }
+}
+
+.page {
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100%;
+
+}
+
+.header {}
+
+.content {}
+
+.footer {}
+
+h1 {
+  font-family: 'Philosopher', sans-serif;
+  font-weight: 400;
+  font-size: 4.8rem;
+
+  @media (max-width: $tablet) {
+    font-size: 3.6rem;
+  }
+  @media (max-width: $mobile) {
+    font-size: 2.8rem;
+  }
+}
+
+h2 {
+  font-family: 'Philosopher', sans-serif;
+  font-weight: 700;
+  font-size: 3.2rem;
+
+  @media (max-width: $tablet) {
+    font-size: 2.8rem;
+    font-weight: 400;
+  }
+
+  @media (max-width: $mobile) {
+    font-size: 2.4rem;
+  }
+
+}

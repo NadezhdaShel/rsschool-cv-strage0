@@ -1,0 +1,7 @@
+.linthtml
+.editorconfig
+.stylelintrc
+package-lock.json
+node_modules/*
+.vscode/*
+.gitignore

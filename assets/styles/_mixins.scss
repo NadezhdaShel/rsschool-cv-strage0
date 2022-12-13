@@ -1,0 +1,23 @@
+@mixin gradient-border($width, $borderRadius, $color) {
+  position: relative;
+  background-clip: padding-box;
+  background-color: $color-light;
+  border-radius: 0px $borderRadius 0px $borderRadius;
+  border: $width solid transparent;
+
+  &::before {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: -$width;
+    content: '';
+    display: block;
+    background: $gradient;
+    opacity: 0.3;
+    border-radius: 0px $borderRadius 0px $borderRadius;
+  }
+}
+
