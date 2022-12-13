@@ -1,0 +1,134 @@
+.nav {}
+
+.nav__list {
+  display: flex;
+  justify-content: flex-end;
+
+  @media (max-width: $bp-menu) {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 101;
+    width: 100%;
+    min-height: 100vh;
+    padding: 40px 30px 30px 30px;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: transform 0.5s ease 0s;
+    background-color: $color3;
+  }
+
+  &.active-burger {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0%);
+  }
+
+}
+
+.nav__item {
+  margin: 0px 30px 0px 0px;
+
+  &:last-child {
+    margin: 0;
+  }
+
+  @media (max-width: $bp-menu) {
+    margin: 0px 0px 20px 0px;
+  }
+}
+
+.nav__link {
+  position: relative;
+  display: block;
+  padding: 0 0 5px 0;
+  white-space: nowrap;
+  @extend %subtitle-font;
+  color: $color-light-font;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: color 0.3s ease 0s;
+
+  &::after {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+    display: block;
+    content: "";
+    height: 1px;
+    width: 0%;
+    background: $gradient-light-right;
+  }
+
+  &:hover {
+    @media (hover: hover) and (pointer: fine) {
+      &::after {
+        width: 100%;
+        transition: width 0.3s ease 0s;
+      }
+    }
+  }
+
+  &_active {
+    &::after {
+      width: 100%;
+      transition: width 0.3s ease 0s;
+    }
+  }
+}
+
+.nav__mini {
+  margin: 0 0 0 auto;
+  position: relative;
+  z-index: 102;
+  display: none;
+  width: 18px;
+  height: 10px;
+
+  span {
+    position: absolute;
+    left: 0%;
+    display: block;
+    width: 100%;
+    height: 2px;
+    border-radius: 2px;
+    background-color: $color-light;
+    transition: transform 0.2s;
+  }
+
+  span:nth-child(1) {
+    top: 0px;
+  }
+
+  span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  span:nth-child(3) {
+    bottom: 0px;
+  }
+
+  @media (max-width: $bp-menu) {
+    display: block;
+  }
+
+  &.active-burger span {}
+
+  &.active-burger span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 4px;
+  }
+
+  &.active-burger span:nth-child(2) {
+    transform: scale(0);
+  }
+
+  &.active-burger span:nth-child(3) {
+    transform: rotate(-225deg);
+    bottom: 4px;
+  }
+}

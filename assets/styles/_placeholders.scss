@@ -1,0 +1,54 @@
+%subtitle-font {
+  font-size: 1.8rem;
+}
+
+%primary-font {
+  font-size: 1.6rem;
+  line-height: 140%;
+}
+
+%underline-font {
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    position: absolute;
+    z-index: 2;
+    top: 100%;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: $line-width-decorate;
+    content: '';
+    background: $gradient-light-left, $gradient;
+    border: none;
+  }
+}
+
+%underline-link {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  padding: 0 0 5px 0;
+  cursor: pointer;
+
+
+  &::after {
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    right: 0;
+    display: block;
+    content: "";
+    height: 1px;
+    width: 0%;
+    background: $gradient-light-left, $gradient;
+    // transition: width 0.3s ease 0s;
+  }
+
+  // &:hover {
+  //   &::after {
+  //     width: 100%;
+  //   }
+  // }
+}
