@@ -1,0 +1,4 @@
+.title {
+  color: $color-title;
+  @extend %underline-font;
+}
