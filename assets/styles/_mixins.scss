@@ -1,7 +1,7 @@
 @mixin gradient-border($width, $borderRadius, $color) {
   position: relative;
   background-clip: padding-box;
-  background-color: #fff;
+  background-color: $color-light;
   border-radius: 0px $borderRadius 0px $borderRadius;
   border: $width solid transparent;
 

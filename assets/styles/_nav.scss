@@ -15,7 +15,7 @@
     padding: 40px 30px 30px 30px;
     visibility: hidden;
     opacity: 0;
-    //transform: translateY(-100%);
+    transform: translateY(-100%);
     transition: transform 0.5s ease 0s;
     background-color: $color3;
   }
@@ -23,7 +23,6 @@
   &.active-burger {
     visibility: visible;
     opacity: 1;
-
     transform: translateY(0%);
   }
 
@@ -46,10 +45,11 @@
   display: block;
   padding: 0 0 5px 0;
   white-space: nowrap;
+  @extend %subtitle-font;
   color: $color-light-font;
-  text-shadow: 1px 1px 1px $color-secondary;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
   cursor: pointer;
-  transition: color 0.2s ease 0s;
+  transition: color 0.3s ease 0s;
 
   &::after {
     position: absolute;
@@ -60,19 +60,22 @@
     content: "";
     height: 1px;
     width: 0%;
-    background: #fff; //$gradient-light-right;
-    transition: width 0.2s ease 0s;
+    background: $gradient-light-right;
   }
 
   &:hover {
-    &::after {
-      width: 100%;
+    @media (hover: hover) and (pointer: fine) {
+      &::after {
+        width: 100%;
+        transition: width 0.3s ease 0s;
+      }
     }
   }
 
   &_active {
     &::after {
       width: 100%;
+      transition: width 0.3s ease 0s;
     }
   }
 }

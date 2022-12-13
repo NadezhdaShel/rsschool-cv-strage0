@@ -3,41 +3,95 @@
 }
 
 .footer__wrapper {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: $pad) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  @media (max-width: $mobile) {
+    flex-wrap: wrap;
+  }
 }
 
-.footer__git {
+.footer__contact {}
 
-}
 .footer__link {
   display: flex;
   align-items: center;
 
   svg {
     fill: $color-light-font;
-
+    stroke: $color-light-font;
+    transition: all 0.3s ease 0s;
   }
+
   &:hover {
-    svg {
-      fill: #000000;
-    }
-    .footer__text {
-      color: #000000;
+    @media (hover: hover) and (pointer: fine) {
+      svg {
+        fill: rgba(255, 255, 255, 0.5);
+      }
+
+      .footer__text {
+        color: rgba(255, 255, 255, 0.5);
+      }
     }
   }
 }
-.footer__icon {
+
+.footer__contact-icon {
   margin: 0px 20px 0px 0px;
-}
-.footer__text {
-  color: $color-light-font;
-}
-.footer__year {
-  color: $color-light-font;
+
+  @media (max-width: $pad) {
+    margin: 0px 10px 0px 0px;
+
+    svg {
+      width: 25px;
+      height: 25px;
+    }
+  }
 }
 
-.footer__course {}
+.footer__contact-name {
+  color: $color-light-font;
+  @extend %subtitle-font;
+
+  @media (max-width: $tablet) {
+    font-size: 1.6rem;
+  }
+}
+
+.footer__year {
+  padding: 0 20px;
+  @extend %subtitle-font;
+  color: $color-light-font;
+
+  @media (max-width: $tablet) {
+    font-size: 1.6rem;
+  }
+
+  @media (max-width: $mobile) {
+    flex: 1 1 100%;
+    margin-top: 10px;
+    text-align: center;
+    order: 3;
+  }
+}
+
+.footer__course {
+  @media (max-width: $pad) {
+    svg {
+      width: 80px;
+      height: 30px;
+    }
+  }
+
+  @media (max-width: $mobile) {
+    order: 2;
+  }
+}

@@ -6,7 +6,11 @@
 }
 
 .english__title {
-  margin: 0px 0px 20px 0px;
+  margin: 0px 0px 40px 0px;
+
+  @media (max-width: $mobile) {
+    margin: 0px 0px 20px 0px;
+  }
 }
 
 .english__text {

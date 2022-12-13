@@ -1,0 +1,18 @@
+<svg width="600" height="600" xmlns="http://www.w3.org/2000/svg">
+	<defs>
+<linearGradient id="gradient">
+<stop class="stop1" offset="0%"/>
+<stop class="stop2" offset="50%"/>
+<stop class="stop3" offset="100%"/>
+</linearGradient>
+<style type="text/css"><![CDATA[.st{fill: url(#gradient);}
+.stop1 {stop-color: #8b3088;}
+.stop2 {stop-color: #693a90;}
+.stop3 {stop-color: #414191;}
+]]></style>
+</defs>
+ <g>
+  <ellipse ry="300" rx="300" id="svg_2" cy="300" cx="300" stroke="#fff" fill="#fff"/>
+  <text class="st" font-weight="bold" xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="300" id="svg_1" y="390" x="90" stroke-width="0">CV</text>
+ </g>
+</svg>

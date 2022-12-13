@@ -4,35 +4,76 @@
 
 .header__wrapper {
   padding-top: 100px;
-  padding-bottom: 100px;
+  padding-bottom: 70px;
+
+  @media (max-width: $small-desktop) {
+    padding-top: 70px;
+    padding-bottom: 50px;
+  }
+
+  @media (max-width: $pad) {
+    padding-bottom: 70px;
+  }
+
+  @media (max-width: $tablet) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  @media (max-width: $mobile) {
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+
+  @media (max-width: $mobile1) {
+    padding-top: 50px;
+  }
 }
 
 .header__content {
   display: flex;
   color: $color-light-font;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
 }
 
 .header__foto {
   position: relative;
   z-index: 1;
   padding: $line-width-decorate;
-  border: $line-width-decorate solid #fff;
+  border: $line-width-decorate solid $color-light;
   border-radius: 0px $radius-decorate 0px $radius-decorate;
+
+  @media (max-width: $mobile1) {
+    display: none;
+  }
 
   &::before {
     position: absolute;
     z-index: 2;
     top: -$line-width-decorate;
-    left: -200%;
+    left: -25vw;
     right: 100%;
     display: block;
     height: $line-width-decorate;
     content: '';
     background: $gradient-light-left;
+
+    @media (max-width: 1400px) {
+      left: -15vw;
+    }
+
+    @media (max-width: 1224px) {
+      display: none;
+    }
   }
 
   img {
-    border-radius: 0px calc($radius-decorate - $line-width-decorate) 0px calc($radius-decorate - $line-width-decorate);
+    border-radius: 0px $radius-image 0px $radius-image;
+
+    @media (max-width: $tablet) {
+      width: 100px;
+      height: 100px;
+    }
   }
 }
 
@@ -42,6 +83,14 @@
   flex: 1 1 auto;
   align-self: flex-end;
   padding: 0px 0px 0px 60px;
+
+  @media (max-width: $pad) {
+    padding: 0px 0px 0px 30px;
+  }
+
+  @media (max-width: $mobile) {
+    padding: 0px 0px 0px 20px;
+  }
 
   &::before {
     position: absolute;
@@ -53,16 +102,23 @@
     height: $line-width-decorate;
     content: '';
     background: $gradient-light-right;
+
+    @media (max-width: $mobile1) {
+      display: none;
+    }
   }
 }
 
 .header__nav {
   padding: 20px 50px;
-  position: fixed;
-  z-index: 100;
-  top: 0;
-  left: 0;
-  width: 100%;
+
+  @media (max-width: $bp-menu) {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
 
   &.activ-scroll {
     background: $gradient;
