@@ -1,24 +1,19 @@
 //Burger Menu
-function Burger(setting) {
+function Menu(setting) {
   let privates = {};
   privates.setting = setting;
   privates.navigation = document.querySelector(privates.setting.navigate);
   if (privates.navigation === null) { return; }
-
+  privates.navPosition = privates.navigation.offsetTop;
   privates.nav = {
     "navMini": privates.navigation.querySelector(privates.setting.navMini),
     "navList": privates.navigation.querySelector(privates.setting.navList),
     "navLink": privates.navigation.querySelectorAll(privates.setting.navLink),
-    "navLinkActive": 0,
   }
   privates.class_active = privates.setting.class_active;
   privates.class_link_active = privates.setting.class_link_active;
   privates.class_on_scroll = privates.setting.class_on_scroll;
 
-  privates.sectionItems = [];
-  for (let i = 0; i < privates.nav.navLink.length; i++) {
-    privates.sectionItems[i] = document.querySelector(privates.nav.navLink[i].getAttribute("href"));
-  }
   //Methods
   this.clickMiniMenu = () => {
     privates.nav.navMini.classList.toggle(privates.class_active);
@@ -28,8 +23,9 @@ function Burger(setting) {
   this.clickMenuList = (event) => {
     if (event.target.tagName != "A") return;
     //Change class select menu
-    // privates.nav.navLink[privates.nav.navLinkActive].classList.remove(privates.class_link_active);
-    // privates.nav.navLinkActive = [].indexOf.call(event.target.parentNode, event.target);
+    if (window.matchMedia(`(min-width: ${setting.break_point + 1}px)`)) {
+      event.target.classList.add(privates.class_link_active);
+    }
     //Scroll to section
     event.preventDefault();
     let offsetTop = document.querySelector(event.target.getAttribute("href")).offsetTop - privates.navigation.offsetHeight;
@@ -37,35 +33,27 @@ function Burger(setting) {
       top: offsetTop,
       behavior: "smooth",
     });
-
     //Change class select menu
-    // privates.nav.navLink[privates.nav.navLinkActive].classList.add(privates.class_link_active);
-    if (privates.nav.navMini.style.display !== "none") {
+    if (window.matchMedia(`(min-width: ${setting.break_point + 1}px)`)) {
+      scrollTimeout = setTimeout(() => {
+        event.target.classList.remove(privates.class_link_active);
+      }, 1000);
+    }
+    //Close burger
+    if (window.matchMedia(`(max-width: ${setting.break_point}px)`)) {
       this.clickMiniMenu();
     }
-
   }
 
   // Change menu on Scroll
   this.animOnScroll = () => {
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+
     //Add style of menu on scroll
-    if (scrollTop > 0) {
+    if (scrollTop > privates.navPosition && window.matchMedia(`(min-width: ${setting.break_point + 1}px)`)) {
       privates.navigation.classList.add(privates.class_on_scroll);
     } else {
       privates.navigation.classList.remove(privates.class_on_scroll);
-    }
-    //Change menu item on Scroll
-    for (let i = 0; i < privates.sectionItems.length; i++) {
-      if (privates.sectionItems[i] != null) {
-        let top = privates.sectionItems[i].getBoundingClientRect().top;
-        let windowHeight = window.innerHeight;
-        if (top <= windowHeight / 4 && top > 0) {
-          privates.nav.navLink[privates.nav.navLinkActive].classList.remove(privates.class_link_active);
-          privates.nav.navLinkActive = i;
-          privates.nav.navLink[privates.nav.navLinkActive].classList.add(privates.class_link_active);
-        }
-      }
     }
   }
   this.eventOnScroll = () => {
@@ -78,11 +66,10 @@ function Burger(setting) {
     }
   }
   //Events
-  if (privates.sectionItems.length > 0) {
-    window.addEventListener('scroll', () => {
-      this.eventOnScroll();
-    });
-  }
+  window.addEventListener('scroll', () => {
+    this.eventOnScroll();
+  });
+
   if (privates.nav.navMini !== null) {
     privates.nav.navMini.addEventListener('click', () => {
       this.clickMiniMenu();
@@ -95,13 +82,14 @@ function Burger(setting) {
   }
 }
 
-new Burger({
-  "navigate": "nav",
+new Menu({
+  "navigate": ".header__navbar",
   "navMini": ".nav__mini",
   "navList": ".nav__list",
   "navLink": ".nav__link",
   "class_active": "active-burger",
   "class_link_active": "nav__link_active",
   "class_on_scroll": "activ-scroll",
+  "break_point": 768,
 })
 
