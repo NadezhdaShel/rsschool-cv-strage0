@@ -1,4 +1,3 @@
-//Burger Menu
 function Menu(setting) {
   let privates = {};
   privates.setting = setting;
@@ -23,7 +22,7 @@ function Menu(setting) {
   this.clickMenuList = (event) => {
     if (event.target.tagName != "A") return;
     //Change class select menu
-    if (window.matchMedia(`(min-width: ${setting.break_point + 1}px)`)) {
+    if (window.matchMedia(`(min-width: ${setting.break_point + 1}px)`).matches) {
       event.target.classList.add(privates.class_link_active);
     }
     //Scroll to section
@@ -34,13 +33,13 @@ function Menu(setting) {
       behavior: "smooth",
     });
     //Change class select menu
-    if (window.matchMedia(`(min-width: ${setting.break_point + 1}px)`)) {
+    if (window.matchMedia(`(min-width: ${setting.break_point + 1}px)`).matches) {
       scrollTimeout = setTimeout(() => {
         event.target.classList.remove(privates.class_link_active);
       }, 1000);
     }
     //Close burger
-    if (window.matchMedia(`(max-width: ${setting.break_point}px)`)) {
+    if (window.matchMedia(`(max-width: ${setting.break_point}px)`).matches) {
       this.clickMiniMenu();
     }
   }
@@ -50,7 +49,7 @@ function Menu(setting) {
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
 
     //Add style of menu on scroll
-    if (scrollTop > privates.navPosition && window.matchMedia(`(min-width: ${setting.break_point + 1}px)`)) {
+    if (scrollTop > privates.navPosition) {
       privates.navigation.classList.add(privates.class_on_scroll);
     } else {
       privates.navigation.classList.remove(privates.class_on_scroll);
@@ -65,6 +64,7 @@ function Menu(setting) {
       }, 200);
     }
   }
+
   //Events
   window.addEventListener('scroll', () => {
     this.eventOnScroll();
