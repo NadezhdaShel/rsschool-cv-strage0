@@ -37,7 +37,7 @@
         fill: rgba(255, 255, 255, 0.5);
       }
 
-      .footer__text {
+      .footer__contact-name {
         color: rgba(255, 255, 255, 0.5);
       }
     }
@@ -45,7 +45,7 @@
 }
 
 .footer__contact-icon {
-  margin: 0px 20px 0px 0px;
+  margin: 0px 15px 0px 0px;
 
   @media (max-width: $pad) {
     margin: 0px 10px 0px 0px;

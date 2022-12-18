@@ -4,11 +4,11 @@
 
 .header__wrapper {
   padding-top: 100px;
-  padding-bottom: 70px;
+  padding-bottom: 138px;
 
   @media (max-width: $small-desktop) {
     padding-top: 70px;
-    padding-bottom: 50px;
+    padding-bottom: 118px;
   }
 
   @media (max-width: $pad) {
@@ -22,7 +22,7 @@
 
   @media (max-width: $mobile) {
     padding-top: 20px;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
   }
 
   @media (max-width: $mobile1) {
@@ -109,18 +109,25 @@
   }
 }
 
-.header__nav {
-  padding: 20px 50px;
+.header__navbar {
+  position: absolute;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+
+  &.activ-scroll {
+    position: fixed;
+    top: 0;
+    background: $gradient;
+  }
 
   @media (max-width: $bp-menu) {
     position: fixed;
-    z-index: 100;
     top: 0;
-    left: 0;
-    width: 100%;
   }
+}
 
-  &.activ-scroll {
-    background: $gradient;
-  }
+.header__nav {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
