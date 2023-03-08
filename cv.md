@@ -59,8 +59,8 @@ function revrot (str,sz) {
 
 **Educational projects:**
 * Tajem - [nadezhdashel.github.io/Tajam](https://nadezhdashel.github.io/Tajam/)
-* Konstruct - [nadezhdashel.github.io/Konstruct](https://nadezhdashel.github.io/Konstruct/)
-* Pompeo - [nadezhdashel.github.io/Pompeo](https://nadezhdashel.github.io/Pompeo/)
+* Plants - [nadezhdashel.github.io/JS-Pre-School-2022Q4/plants](https://nadezhdashel.github.io/JS-Pre-School-2022Q4/plants/)
+* Momentum - [nadezhdashel.github.io/JS-Pre-School-2022Q4/momentum](https://nadezhdashel.github.io/JS-Pre-School-2022Q4/momentum/))
 
   
 ## English
